@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/layout.astro"
+import Main from '../../components/main.astro'
+---
+
+<Layout title="codes">
+    <Main>
+        <h1 class="text-5xl text-center text-lime-600">codes</h1>
+        <p class="text-center">
+            hot linking is allowed! Please make sure you put a code on your website <span class="italic underline decoration-dotted text-lime-600">before</span> applying
+        </p>
+        <hr>
+        <dl>
+            <dt>50x50</dt>
+            <dd>
+                <img src="/50x50.png" alt="50x50 code">
+                <img src="/250x50.png" alt="50x50 code">
+            </dd>
+            <dt>75x50</dt>
+            <dd>
+                <img src="/75x50.png" alt="75x50 code">
+                <img src="/275x50.png" alt="75x50 code">
+            </dd>
+            <dt>88x31</dt>
+            <dd>
+                <img src="/88x31.png" alt="88x31 code">
+                <img src="/288x31.png" alt="88x31 code">
+            </dd>
+            <dt>100x50</dt>
+            <dd>
+                <img src="/100x50.png" alt="100x50 code">
+                <img src="/2100x50.png" alt="100x50 code">
+            </dd>
+        </dl>
+    </Main>
+</Layout>
+<style>
+    dl{
+        margin: 10px;
+    }
+    hr{
+        border: 1px solid var(--color-lime-600);
+        margin: 0 4em;
+    }
+</style>

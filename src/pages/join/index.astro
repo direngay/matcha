@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/layout.astro"
+import Main from '../../components/main.astro'
+---
+
+<Layout title="join form">
+    <Main>
+        <h1 class="text-center text-4xl text-lime-600">join/update</h1>
+        <p class="text-center mx-3">You do not need to have a website to join, but if you do you'll need to already have the code up on your site (make sure the code is easy to find!) <span class="text-lime-700 underline decoration-dotted decoration-2">Also, a working email address is required!</span></p>
+
+        <form id="myForm" action="https://docs.google.com/forms/d/e/1FAIpQLScTFyQGGKAVzh6HkzsJI9QmIgVUyfO59XXoi0jJVis5_iIvrA/formResponse" method="post" class="text-left flex flex-col items-center justify-center">
+            <label for="name">name *</label>
+            <input id="name" required type="text" name="entry.640529922">
+            <br>
+            <label for="email">email *</label>
+            <input id="email" required type="text" name="entry.575968815">
+            <br>
+            <label for="country">country *</label>
+            <input id="country" required type="text" name="entry.1059467529">
+            <br>
+            <label for="website">website</label>
+            <input id="website" type="text" name="entry.1807590667">
+            <br>
+            <label for="comments">comments</label>
+            <textarea id="comments" name="entry.1941199286"></textarea>
+            <br>
+            <button class="cursor-pointer bg-lime-400 border-1 rounded-xl w-20" type="submit">done!</button>
+        </form>
+        <p class="text-center text-sm text-lime-600">
+            if you need to update anything, then simply just resubmit the form with your old and new information.
+        </p>
+    </Main>
+</Layout>
+<style>
+    input, textarea{
+        width: 70%;
+        background: var(--color-lime-100);
+        border-bottom: 1px dashed black;
+        border-top: none;
+    }
+    input:focus, textarea:focus{
+        outline: none;
+        inset: unset;
+    }
+    button:hover{
+        background: var(--color-lime-100);
+        transition: all .3s;
+        color: black;
+    }
+    button{
+        transition: all .3s;
+        color: white;
+    }
+</style>
+<script>
+    let form = document.getElementById("myForm")
+    form?.addEventListener("submit", e => {
+        e.preventDefault()
+
+        fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+            })
+    })
+</script>

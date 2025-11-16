@@ -1,16 +1,27 @@
 ---
-
+import Layout from "../layouts/layout.astro"
+import Main from '../components/main.astro'
+import Stats from '../components/stats.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <Main>
+        <h1 class="text-center text-5xl text-lime-600">welcome!!</h1>
+        <article>
+            <blockquote class="rounded border-l-lime-300 border-l-4 bg-lime-100 px-2 text-sm">
+                A matcha latte (抹茶ラテ) is a matcha-flavoured variant of the latte which can be served either hot or cold. The drink gained popularity after going viral on social media such as Instagram and TikTok, becoming a TikTok food trend. <span class="underline decoration-dotted decoration-2 italic text-lime-500"><a href="https://en.wikipedia.org/wiki/Matcha_latte">- wikipedia</a></span>
+            </blockquote>
+            <p class="text-center">if you love matcha lattes, then please join!</p>
+        </article>
+        <Stats/>
+        <article style="text-align: center; margin:10px;">
+            <a href="https://thefanlistings.org/" target="_blank"><img src="/tfl.gif" alt="thefanlisting.org"></a>
+        </article>
+    </Main>
+</Layout>
+<style>
+    a{
+        color: inherit;
+        text-decoration: inherit;
+    }
+</style>
