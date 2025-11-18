@@ -2,6 +2,7 @@
   "name": "out-out",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://github.com/direngay/matcha.git",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
